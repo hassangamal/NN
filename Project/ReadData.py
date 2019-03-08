@@ -1,29 +1,43 @@
+from Project.FileData import FileData
 class ReadData:
-    def __init__(self):
-        self.Feature = []
-        self.Class=[]
+    def GuiDate(self,x,y,c1,c2):
+        featurex = self.returnFeature(x)
+        featurey = self.returnFeature(y)
+        classLabel=[]
+        featureX=[]
+        featureY=[]
+        if c1 == 1:
+            featureX = featurex[0:30]
+            featureY= featurey[0:30]
+            classLabel = [1 for i in range(0,30)]
+            if c2 == 2:
+                featureX.extend(featurex[50:80])
+                featureY.extend(featurey[50:80])
+                classLabel.extend([-1 for i in range(0,30)])
+            else:
+                featureX.extend(featurex[100:130])
+                featureY.extend(featurey[100:130])
+                classLabel.extend([-1 for i in range(0,30)])
+        elif c1 == 2:
+            featureX = featurex[50:80]
+            featureY = featurey[50:80]
+            classLabel= [1 for i in range(0,30)]
+            featureX.extend(featurex[100:130])
+            featureY.extend(featurey[100:130])
+            classLabel.extend([-1 for i in range(0,30)])
+        return (featureX,featureY,classLabel)
 
-    def readData(self):
-        file =open('IrisData.txt','r')
-        file.readline()
-        FeatureX1=[]
-        FeatureX2=[]
-        FeatureX3=[]
-        FeatureX4=[]
-        for line in file:
-            row = line.split(',')
-            #print(row)
-            FeatureX1.append(float(row[0]))
-            FeatureX2.append(float(row[1]))
-            FeatureX3.append(float(row[2]))
-            FeatureX4.append(float(row[3]))
-            if row[4]=='Iris-setosa':
-                self.Class.append(1)
-            if row[4] == 'Iris-versicolor':
-                self.Class.append(2)
-            if row[4] == 'Iris-virginica':
-                self.Class.append(3)
-        self.Feature.append(FeatureX1)
-        self.Feature.append(FeatureX2)
-        self.Feature.append(FeatureX3)
-        self.Feature.append(FeatureX4)
+
+    def returnFeature(self,index):
+        fd=FileData()
+        fd.fileData()
+        feature = []
+        if index == 0:
+            feature = fd.FeatureX1
+        elif index == 1:
+            feature = fd.FeatureX2
+        elif index == 2:
+            feature = fd.FeatureX3
+        else:
+            feature = fd.FeatureX4
+        return feature

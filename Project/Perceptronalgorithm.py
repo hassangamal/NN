@@ -9,7 +9,7 @@ class Perceptron:
         epoch = 0
         weights = [np.random.rand(1)[0], np.random.rand(1)[0], np.random.rand(1)[0]]
 
-        while  epoch < m:
+        while epoch < m:
 
             for i in range(0,len(featureX)+len(featureY)):
 
@@ -23,6 +23,7 @@ class Perceptron:
                 else:
                     d = -1
                 '''
+
                 error = d - y
 
                 weights[0] = weights[0] + eta * error
