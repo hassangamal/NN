@@ -17,7 +17,16 @@ class Perceptron:
                 out = self.net_input([featureX[i], featureY[i]], weights, bias)
                 y = self.predict(out)
                 d = classlabel[i]
+
+                '''
+                if d == y:
+                    d = 1
+                else:
+                    d = -1
+                '''
+
                 error = d - y
+
                 weights[0] = weights[0] + eta * error
                 weights[1] = weights[1] + eta * error * featureX[i]
                 weights[2] = weights[2] + eta * error * featureY[i]
@@ -26,10 +35,22 @@ class Perceptron:
             w2 = weights[2]
             b = weights[0] * bias
             epoch = epoch + 1
+        # print(w1, w2, b)
         return (w1, w2, b)
+
+    def PerceptronalgorithmTest(self, featureX, featureY, w1, w2, bias):
+        feature = [featureX, featureY]
+        wight = [w1, w2]
+        out = self.net_inputTest(feature, wight, bias)
+        y = self.predict(out)
+        return y
 
     def net_input(self, Input, weight, bias):
         output = bias * weight[0] + weight[1] * Input[0] + weight[2] * Input[1]
+        return output
+
+    def net_inputTest(self, Input, weight, bias):
+        output = bias + weight[0] * Input[0] + weight[1] * Input[1]
         return output
 
     def predict(self, out):

@@ -4,6 +4,8 @@ from Project.DrawData import DrawData
 from Project.FileData import FileData
 from Project.Perceptronalgorithm import Perceptron
 from Project.ReadData import ReadData
+from Project.Testing import Testing
+from Project.TrainingModel import TrainingModel
 
 
 def drawFeature1():
@@ -49,12 +51,21 @@ def Training():
     featureX, featureY, ClassLabel = rd1.GuiData(idxFeature(tkdropdownFeature1.get()),
                                                  idxFeature(tkdropdownFeature2.get()),
                                                  idxClass(tkdropdownClass1.get()), idxClass(tkdropdownClass2.get()))
-    w1, w2, b = perceptron_algo.Perceptronalgorithm(featureX, featureY, ClassLabel, float(learning_rate_input.get()),
+    W1, W2, b = perceptron_algo.Perceptronalgorithm(featureX, featureY, ClassLabel, float(learning_rate_input.get()),
                                                     float(number_epochs_input.get()), int(CheckBias.get()))
+    trainModel.set_w1(W1)
+    trainModel.set_w2(W2)
+    trainModel.set_b(b)
+    dr.line(W1, W2, b)
+    Plotting()
 
 
 def Test():
-    return
+    featureX, featureY, ClassLabel = rd1.TestingData(idxFeature(tkdropdownFeature1.get()),
+                                                     idxFeature(tkdropdownFeature2.get()),
+                                                     idxClass(tkdropdownClass1.get()), idxClass(tkdropdownClass2.get()))
+    test = Testing()
+    test.testing(featureX, featureY, ClassLabel, trainModel.get_w1(), trainModel.get_w2(), trainModel.get_b())
 
 
 def Plotting():
@@ -83,7 +94,7 @@ def idxClass(_class):
 
 
 root = Tk()
-root.geometry("1000x500")
+root.geometry("500x500")
 root.title("Single Layer Perceptron Task1")
 
 features = ['X1', 'X2', 'X3', 'X4']
@@ -105,6 +116,9 @@ rd1 = ReadData()
 
 # plot Data
 dr = DrawData()
+
+# training model
+trainModel = TrainingModel()
 
 # init Perceptron
 perceptron_algo = Perceptron()
