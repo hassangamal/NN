@@ -2,7 +2,7 @@ from Project.FileData import FileData
 
 
 class ReadData:
-    def GuiData(self, x, y, c1, c2):
+    def GUIData(self, x, y, c1, c2):
         featurex = self.returnFeature(x)
         featurey = self.returnFeature(y)
         classLabel = []

@@ -35,7 +35,6 @@ class Perceptron:
             w2 = weights[2]
             b = weights[0] * bias
             epoch = epoch + 1
-        # print(w1, w2, b)
         return (w1, w2, b)
 
     def PerceptronalgorithmTest(self, featureX, featureY, w1, w2, bias):

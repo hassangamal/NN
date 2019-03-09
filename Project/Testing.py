@@ -19,5 +19,5 @@ class Testing:
                 res[1, 1] = res[1, 1] + 1
 
         print(res)
-        print("Test OF Success C1 = ", (res[0, 0] / 20) * 100)
-        print("Test OF Success C2 = ", (res[1, 1] / 20) * 100)
+        print("Test of Success C1 = ", (res[0, 0] / 20) * 100)
+        print("Test of Success C2 = ", (res[1, 1] / 20) * 100)

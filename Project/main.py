@@ -1,5 +1,7 @@
 from tkinter import *
 
+import numpy as np
+
 from Project.DrawData import DrawData
 from Project.FileData import FileData
 from Project.Perceptronalgorithm import Perceptron
@@ -48,7 +50,7 @@ def drawCheckBoxBias():
 
 
 def Training():
-    featureX, featureY, ClassLabel = rd1.GuiData(idxFeature(tkdropdownFeature1.get()),
+    featureX, featureY, ClassLabel = rd1.GUIData(idxFeature(tkdropdownFeature1.get()),
                                                  idxFeature(tkdropdownFeature2.get()),
                                                  idxClass(tkdropdownClass1.get()), idxClass(tkdropdownClass2.get()))
     W1, W2, b = perceptron_algo.Perceptronalgorithm(featureX, featureY, ClassLabel, float(learning_rate_input.get()),
@@ -56,7 +58,14 @@ def Training():
     trainModel.set_w1(W1)
     trainModel.set_w2(W2)
     trainModel.set_b(b)
-    dr.line(W1, W2, b)
+
+    f1 = int(np.max(featureX[0:30]))
+    f2 = int(np.max(featureY[30:60]))
+    Xmax = max(f1, f2)
+    f1 = int(np.min(featureX[0:30]))
+    f2 = int(np.min(featureY[30:60]))
+    Xmin = min(f1, f2)
+    dr.line(Xmin, Xmax, W1, W2, b)
     Plotting()
 
 

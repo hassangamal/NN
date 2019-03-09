@@ -1,7 +1,7 @@
 class FileData:
     def __init__(self):
-        self.Feature = []
         self.Class = []
+        self.Feature = []
         self.FeatureX1 = []
         self.FeatureX2 = []
         self.FeatureX3 = []
@@ -12,7 +12,6 @@ class FileData:
         file.readline()
         for line in file:
             row = line.split(',')
-            # print(row)
             self.FeatureX1.append(float(row[0]))
             self.FeatureX2.append(float(row[1]))
             self.FeatureX3.append(float(row[2]))
