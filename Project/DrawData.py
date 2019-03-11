@@ -9,6 +9,12 @@ class DrawData:
         plt.plot(x1[0:50], x2[0:50], 'ro')
         plt.plot(x1[50:100], x2[50:100], 'go')
 
+    def plot1(self, x1, x2):
+        plt.scatter(x1[0:50], x2[0:50])
+        plt.scatter(x1[50:100], x2[50:100])
+        plt.scatter(x1[100:150], x2[100:150])
+
+
     def draw(self):
         plt.title('Plotting Features')
         plt.xlabel('X')

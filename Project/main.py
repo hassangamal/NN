@@ -59,11 +59,11 @@ def Training():
     trainModel.set_w2(W2)
     trainModel.set_b(b)
 
-    f1 = int(np.max(featureX[0:30]))
-    f2 = int(np.max(featureY[30:60]))
+    f1 = int(np.max(featureX))
+    f2 = int(np.max(featureY))
     Xmax = max(f1, f2)
-    f1 = int(np.min(featureX[0:30]))
-    f2 = int(np.min(featureY[30:60]))
+    f1 = int(np.min(featureX))
+    f2 = int(np.min(featureY))
     Xmin = min(f1, f2)
     dr.line(Xmin, Xmax, W1, W2, b)
     Plotting()
@@ -78,8 +78,12 @@ def Test():
 
 
 def Plotting():
-    dr.plot(rd.Feature[idxFeature(tkdropdownFeature1.get())], rd.Feature[idxFeature(tkdropdownFeature2.get())])
-    dr.draw()
+    #dr.plot(rd.Feature[idxFeature(tkdropdownFeature1.get())], rd.Feature[idxFeature(tkdropdownFeature2.get())])
+    #dr.draw()
+    for i in range(0,4):
+        for j in range(i+1,4):
+            dr.plot1(rd.Feature[i],rd.Feature[j])
+            dr.draw()
 
 
 def idxFeature(_feature):
