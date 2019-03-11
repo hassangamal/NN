@@ -2,9 +2,9 @@ from tkinter import *
 
 import numpy as np
 
+from Project.AdaLinealgorithm import AdaLine
 from Project.DrawData import DrawData
 from Project.FileData import FileData
-from Project.Perceptronalgorithm import Perceptron
 from Project.ReadData import ReadData
 from Project.Testing import Testing
 from Project.TrainingModel import TrainingModel
@@ -44,19 +44,25 @@ def drawNumberEpochs():
     number_epochs_input.grid(row=5, column=1)
 
 
+def drawError():
+    Label(root, text="Error: ").grid(row=6, column=0, sticky=W, padx=20, pady=20)
+    error_input.grid(row=6, column=1)
+
+
 def drawCheckBoxBias():
     C1 = Checkbutton(root, text="Bias", variable=CheckBias, onvalue=1, offvalue=0)
-    C1.grid(row=6, column=0, sticky=W, padx=20, pady=20)
+    C1.grid(row=7, column=0, sticky=W, padx=20, pady=20)
 
 
 def Training():
     featureX, featureY, ClassLabel = rd1.GUIData(idxFeature(tkdropdownFeature1.get()),
                                                  idxFeature(tkdropdownFeature2.get()),
                                                  idxClass(tkdropdownClass1.get()), idxClass(tkdropdownClass2.get()))
-    W1, W2, b = perceptron_algo.Perceptronalgorithm(featureX, featureY, ClassLabel, float(learning_rate_input.get()),
-                                                    float(number_epochs_input.get()), int(CheckBias.get()))
-    trainModel.set_w1(W1)
-    trainModel.set_w2(W2)
+    w1, w2, b = adaLine_algo.AdaLinealgorithm(featureX, featureY, ClassLabel, float(learning_rate_input.get()),
+                                              float(number_epochs_input.get()), int(CheckBias.get()),
+                                              float(error_input.get()))
+    trainModel.set_w1(w1)
+    trainModel.set_w2(w2)
     trainModel.set_b(b)
 
     f1 = int(np.max(featureX))
@@ -65,8 +71,9 @@ def Training():
     f1 = int(np.min(featureX))
     f2 = int(np.min(featureY))
     Xmin = min(f1, f2)
-    dr.line(Xmin, Xmax, W1, W2, b)
-    Plotting()
+    dr.line(Xmin, Xmax, w1, w2, b)
+    dr.plot(rd.Feature[idxFeature(tkdropdownFeature1.get())], rd.Feature[idxFeature(tkdropdownFeature2.get())])
+    dr.draw()
 
 
 def Test():
@@ -78,11 +85,9 @@ def Test():
 
 
 def Plotting():
-    #dr.plot(rd.Feature[idxFeature(tkdropdownFeature1.get())], rd.Feature[idxFeature(tkdropdownFeature2.get())])
-    #dr.draw()
-    for i in range(0,4):
-        for j in range(i+1,4):
-            dr.plot1(rd.Feature[i],rd.Feature[j])
+    for i in range(0, 4):
+        for j in range(i + 1, 4):
+            dr.plot1(rd.Feature[i], rd.Feature[j])
             dr.draw()
 
 
@@ -108,7 +113,7 @@ def idxClass(_class):
 
 root = Tk()
 root.geometry("500x500")
-root.title("Single Layer Perceptron Task1")
+root.title("Single Layer AdaLine Task2")
 
 features = ['X1', 'X2', 'X3', 'X4']
 classes = ['C1', 'C2', 'C3']
@@ -120,6 +125,7 @@ tkdropdownClass1 = StringVar()
 tkdropdownClass2 = StringVar()
 learning_rate_input = Entry(root)
 number_epochs_input = Entry(root)
+error_input = Entry(root)
 CheckBias = IntVar()
 
 # read Data
@@ -133,8 +139,8 @@ dr = DrawData()
 # training model
 trainModel = TrainingModel()
 
-# init Perceptron
-perceptron_algo = Perceptron()
+# init AdaLine
+adaLine_algo = AdaLine()
 
 # Drawing GUI
 drawFeature1()
@@ -143,11 +149,12 @@ drawClass1()
 drawClass2()
 drawLearningRate()
 drawNumberEpochs()
+drawError()
 drawCheckBoxBias()
 
 # init Buttons
-Button(root, text='Training', command=Training).grid(row=7, column=0, sticky=W, padx=20, pady=20)
-Button(root, text='Test', command=Test).grid(row=7, column=1, sticky=W, padx=20, pady=20)
-Button(root, text='Plotting', command=Plotting).grid(row=7, column=2, sticky=W, padx=20, pady=20)
+Button(root, text='Training', command=Training).grid(row=8, column=0, sticky=W, padx=20, pady=20)
+Button(root, text='Test', command=Test).grid(row=8, column=1, sticky=W, padx=20, pady=20)
+Button(root, text='Plotting', command=Plotting).grid(row=8, column=2, sticky=W, padx=20, pady=20)
 
 root.mainloop()
