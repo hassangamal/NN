@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3ea3c6c-8be1-41f3-ac1b-ed0ce0a5fc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Project/AdaLinealgorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/DrawData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/DrawData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/AdaLinealgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/AdaLinealgorithm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/main.py" afterDir="false" />
     </list>
@@ -19,11 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/AdaLinealgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/Perceptronalgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="690">
               <caret line="46" selection-start-line="46" selection-end-line="48" selection-end-column="21" />
             </state>
           </provider>
@@ -98,23 +108,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="30" type="462c0819:PsiDirectoryNode" />
+              <item name="NN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="30" type="462c0819:PsiDirectoryNode" />
+              <item name="NN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NN" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,9 +300,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="25" width="1317" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24343123" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24343123" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2496136" />
       <window_info id="Project Explorer" order="2" weight="0.32998455" />
       <window_info id="Favorites" order="3" side_tool="true" weight="0.32998455" />
@@ -413,16 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="88" column="25" lean-forward="true" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project/Testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -440,17 +439,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project/AdaLinealgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project/Perceptronalgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="690">
           <caret line="46" selection-start-line="46" selection-end-line="48" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/AdaLinealgorithm.py">
+    <entry file="file://$PROJECT_DIR$/Project/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -81,7 +81,7 @@ def Test():
                                                      idxFeature(tkdropdownFeature2.get()),
                                                      idxClass(tkdropdownClass1.get()), idxClass(tkdropdownClass2.get()))
     test = Testing()
-    test.testing(featureX, featureY, ClassLabel, trainModel.get_w1(), trainModel.get_w2(), trainModel.get_b())
+    test.testingAdaline(featureX, featureY, ClassLabel, trainModel.get_w1(), trainModel.get_w2(), trainModel.get_b())
 
 
 def Plotting():

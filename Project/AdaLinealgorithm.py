@@ -48,6 +48,22 @@ class AdaLine:
         MSE = RES / (len(featureX))
         return MSE
 
+    def AdalinealgorithmTest(self, featureX, featureY,  w1, w2, bias):
+        feature = [featureX, featureY]
+        wight = [w1, w2]
+        out = self.net_inputTest(feature, wight, bias)
+        y = self.predict(out)
+        return y
+
+    def net_inputTest(self, Input, weight, bias):
+        output = bias + weight[0] * Input[0] + weight[1] * Input[1]
+        return output
+
     def net_input(self, Input, weight, bias):
         output = bias * weight[0] + weight[1] * Input[0] + weight[2] * Input[1]
         return output
+
+    def predict(self, out):
+        if (out >= 0.0):
+            return 1
+        return -1
