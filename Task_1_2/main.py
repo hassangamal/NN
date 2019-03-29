@@ -2,12 +2,12 @@ from tkinter import *
 
 import numpy as np
 
-from Project.AdaLinealgorithm import AdaLine
-from Project.DrawData import DrawData
-from Project.FileData import FileData
-from Project.ReadData import ReadData
-from Project.Testing import Testing
-from Project.TrainingModel import TrainingModel
+from Task_1_2.AdaLinealgorithm import AdaLine
+from Task_1_2.DrawData import DrawData
+from Task_1_2.FileData import FileData
+from Task_1_2.ReadData import ReadData
+from Task_1_2.Testing import Testing
+from Task_1_2.TrainingModel import TrainingModel
 
 
 def drawFeature1():

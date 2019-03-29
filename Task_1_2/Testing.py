@@ -1,7 +1,7 @@
 import numpy as np
 
-from Project.Perceptronalgorithm import Perceptron
-from Project.AdaLinealgorithm import AdaLine
+from Task_1_2.Perceptronalgorithm import Perceptron
+from Task_1_2.AdaLinealgorithm import AdaLine
 
 
 class Testing:

@@ -1,4 +1,4 @@
-from Project.FileData import FileData
+from Task_1_2.FileData import FileData
 
 
 class ReadData:
