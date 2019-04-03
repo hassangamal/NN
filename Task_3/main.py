@@ -55,14 +55,14 @@ def train_test():
                                                 int(number_hidden_layers_input.get())
                                                 , int(number_neurons_each_hidden_layer_input.get()))
     # Computing OverAllAccurcy
-    OverAllAccurcy = 0.0
+    OverallAccurcy = 0.0
     sum = 0.0
     for i in range(len(Output)):
         Y = ClassLabel[i]
         if Y == Output[i]:
             sum += 1
-    OverAllAccurcy = sum / len(Output)
-    print(OverAllAccurcy)
+    OverAllAccurcy = (sum / len(Output)) * 100
+    print("Overall Accurcy "+str(OverAllAccurcy) + "%")
 
     return
 

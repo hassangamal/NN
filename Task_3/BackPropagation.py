@@ -15,8 +15,8 @@ class BackPropagation:
             activation_function = 2
 
         weights, weights_inputs = self.initialize(num_hidden_layer, num_neurons_layer)
-        print(weights)
-        print(weights_inputs)
+        # print(weights)
+        # print(weights_inputs)
 
         for i in range(epochs):
             for j in range(len(featureX1)):
