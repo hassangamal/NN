@@ -1,5 +1,8 @@
 from tkinter import *
 
+from Task_3.BackPropagation import BackPropagation
+from Task_3.ReadData import ReadData
+
 
 def drawNumberHiddenLayers():
     Label(root, text="Number of hidden layers: ").grid(row=1, column=0, sticky=W, padx=20, pady=20)
@@ -29,22 +32,44 @@ def drawCheckBoxBias():
 def drawDropDownActivationFunctions():
     tkDropDownActivationFunctions.set('Sigmoid')
     Label(root, text="Choose the Activation Function").grid(row=6, column=0, sticky=W, padx=20, pady=20)
+    activationFunctions = ['Sigmoid', 'Hyperbolic']
     OptionMenu(root, tkDropDownActivationFunctions, *activationFunctions).grid(row=6, column=1)
 
 
-def Training():
-    return
+def train_test():
+    rd1 = ReadData()
+    Bp = BackPropagation()
 
+    featureX1, featureX2, featureX3, featureX4, ClassLabel = rd1.GUIData()
+    weights, weights_inputs = Bp.BackPropagationalgorithm(featureX1, featureX2, featureX3, featureX4, ClassLabel,
+                                                          float(learning_rate_input.get()),
+                                                          int(number_epochs_input.get()), int(CheckBias.get()),
+                                                          tkDropDownActivationFunctions.get(),
+                                                          int(number_hidden_layers_input.get())
+                                                          , int(number_neurons_each_hidden_layer_input.get()))
 
-def Test():
+    featureX1, featureX2, featureX3, featureX4, classLabel = rd1.TestingData()
+    Output = Bp.BackPropagationalgorithmTesting(weights, weights_inputs, featureX1, featureX2, featureX3, featureX4,
+                                                int(CheckBias.get()),
+                                                tkDropDownActivationFunctions.get(),
+                                                int(number_hidden_layers_input.get())
+                                                , int(number_neurons_each_hidden_layer_input.get()))
+    # Computing OverAllAccurcy
+    OverAllAccurcy = 0.0
+    sum = 0.0
+    for i in range(len(Output)):
+        Y = ClassLabel[i]
+        if Y == Output[i]:
+            sum += 1
+    OverAllAccurcy = sum / len(Output)
+    print(OverAllAccurcy)
+
     return
 
 
 root = Tk()
 root.geometry("500x500")
 root.title("BackPropagation Algorithm Task3")
-
-activationFunctions = ['Sigmoid', 'Hyperbolic']
 
 number_hidden_layers_input = Entry(root)
 number_neurons_each_hidden_layer_input = Entry(root)
@@ -60,7 +85,6 @@ drawNumberEpochs()
 drawCheckBoxBias()
 drawDropDownActivationFunctions()
 
-Button(root, text='Training', command=Training).grid(row=8, column=0, sticky=W, padx=20, pady=20)
-Button(root, text='Test', command=Test).grid(row=8, column=1, sticky=W, padx=20, pady=20)
+Button(root, text='Training & Testing', command=train_test).grid(row=8, column=0, sticky=W, padx=20, pady=20)
 
 root.mainloop()

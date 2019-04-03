@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3ea3c6c-8be1-41f3-ac1b-ed0ce0a5fc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Task_3/IrisData.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_3/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Vision Lab5-20181107T000016Z-001.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Neural Networks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="f3ea3c6c-8be1-41f3-ac1b-ed0ce0a5fc1d" name="Default Changelist" comment="Task3's GUI has been DONE">
+      <change afterPath="$PROJECT_DIR$/Task_3/BackPropagation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_3/ReadData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/AdaLinealgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/AdaLinealgorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/DrawData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/DrawData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/FileData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/FileData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/IrisData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/IrisData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Perceptronalgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/Perceptronalgorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/ReadData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/ReadData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/Testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/TrainingModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/TrainingModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_1_2/IrisData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task_1_2/IrisData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_3/IrisData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task_3/IrisData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_3/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_3/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,33 +19,36 @@
     <session id="1819136965">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.59" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="235" />
+          <entry key="py" value="289" />
+          <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="235" />
+          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="Python" value="289" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
-          <entry key="txt" value="2" />
+          <entry key="py" value="6" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="3" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -64,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Task_1_2/main.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Task_3/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="56" selection-start-line="56" selection-end-line="92" />
+            <state relative-caret-position="93">
+              <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -76,13 +70,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Task_3/main.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Task_3/BackPropagation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="150">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
               <folding>
-                <marker date="1553889190870" expanded="true" signature="1265:1268" ph="..." />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,6 +98,8 @@
       <find>featurex</find>
       <find>project.</find>
       <find>learning_rate_input</find>
+      <find>classLabel</find>
+      <find>number_hidden_layers_input</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,6 +135,7 @@
         <option value="$PROJECT_DIR$/Task1&amp;2/main.py" />
         <option value="$PROJECT_DIR$/Task_1_2/main.py" />
         <option value="$PROJECT_DIR$/Task_3/main.py" />
+        <option value="$PROJECT_DIR$/Task_3/BackPropagation.py" />
       </list>
     </option>
   </component>
@@ -183,14 +180,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/student_code" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Task_3" />
       <recent name="$PROJECT_DIR$/Project" />
       <recent name="$PROJECT_DIR$/Project/data" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/student_code" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,6 +336,14 @@
       <option name="presentableId" value="Default" />
       <updated>1541548997031</updated>
     </task>
+    <task id="LOCAL-00001" summary="Task3's GUI has been DONE">
+      <created>1553889400761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553889400761</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -405,6 +410,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Task3's GUI has been DONE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task3's GUI has been DONE" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GLYPHES-3.svg" />
     <entry file="file://$PROJECT_DIR$/test.py" />
@@ -432,13 +441,6 @@
     <entry file="file://$PROJECT_DIR$/Project/Task1.py" />
     <entry file="file://$USER_HOME$/anaconda3/envs/vision/lib/python3.6/site-packages/matplotlib/pyplot.py" />
     <entry file="file://$PROJECT_DIR$/Project/task1.py" />
-    <entry file="file://$PROJECT_DIR$/Task_1_2/IrisData.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2235">
-          <caret line="149" column="30" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Task_1_2/TrainingModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -491,22 +493,46 @@
     <entry file="file://$PROJECT_DIR$/Task_3/IrisData.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Task_1_2/IrisData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="119" column="30" lean-forward="true" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_3/ReadData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Task_1_2/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="56" selection-start-line="56" selection-end-line="92" />
+        <state relative-caret-position="180">
+          <caret line="67" column="30" lean-forward="true" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Task_3/BackPropagation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Task_3/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="93">
+          <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
           <folding>
-            <marker date="1553889190870" expanded="true" signature="1265:1268" ph="..." />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
